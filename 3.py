@@ -11,6 +11,7 @@ while inp != 'молоко':
     pr = ''
     for line in lst:
         if line[0] == inp:
+            # поиск товара с наименьшим количеством продаж
             if float(line[-1]) < mn:
                 mn = float(line[-1])
                 pr = line[1]

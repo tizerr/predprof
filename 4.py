@@ -20,6 +20,7 @@ with open('products.csv', encoding='utf-8-sig', newline='\n') as f:
     promos = [promo(i) for i in lst]
 
     head.append('promocode')
+    # добавление к строкам списка столбца с промокодом
     lst = [line + [promo] for line, promo in zip(lst, promos)]
 
     with open('product_promo.csv', 'w', encoding='utf-8-sig') as fo:

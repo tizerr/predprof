@@ -9,6 +9,7 @@ with open('products.csv', encoding='utf-8-sig') as f:
         w = csv.writer(fo, delimiter=';')
         w.writerow(head)
         for line in lst:
+            # добавление рассчитанного столбца total в строку
             line.append(str(float(line[-1]) * float(line[-2])))
             w.writerow(line)
             if line[0] == 'Закуски':

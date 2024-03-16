@@ -33,6 +33,7 @@ with open('products.csv', encoding='utf-8-sig', newline='\n') as f:
         w.writerow(head)
         for line in lst:
             w.writerow(line)
+            # поиск самого дорогого товара
             if line[0] == cat:
                 if float(line[-2]) > mx:
                     mx = float(line[-2])
