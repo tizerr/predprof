@@ -5,7 +5,7 @@ with open('products.csv', encoding='utf-8-sig') as f:
     head = r[0]
     lst = r[1:]
     cnt = 0
-    with open('products_new.csv', 'w', encoding='utf-8-sig') as fo:
+    with open('products_new.csv', 'w', encoding='utf-8-sig', newline='\n') as fo:
         w = csv.writer(fo, delimiter=';')
         w.writerow(head)
         for line in lst:
